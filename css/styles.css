@@ -1,0 +1,65 @@
+.main {
+    display: flex;
+    gap: 32px;
+}
+
+.footer {
+    text-align: center;
+}
+
+.main-header {
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    border: none;
+    padding: 8px;
+}
+
+.bg-black {
+    
+}
+
+#result-bmi{
+    font-size: 110-large;
+    font-family: math;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+ol {
+    list-style-type: none; /* Menghilangkan titik */
+    counter-reset: list; /* Mengatur ulang penghitung */
+}
+
+ol li {
+    counter-increment: list; /* Menghitung setiap item */
+    margin-bottom: 5px; /* Memberi jarak antar item */
+}
+
+ol li::before {
+    content: counter(list) ". "; /* Menampilkan angka sebelum item */
+    font-weight: bold; /* Opsional: membuat angka menjadi tebal */
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+}
