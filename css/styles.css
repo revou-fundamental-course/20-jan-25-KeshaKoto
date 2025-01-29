@@ -1,65 +1,128 @@
-.main {
-    display: flex;
-    gap: 32px;
+/* Mengatur gaya dasar untuk body */
+body {
+    font-family: Arial, sans-serif;  
+    background-color: cadetblue;     
+    margin: 0;                       
+    padding: 20px;                   
 }
 
-.footer {
-    text-align: center;
-}
-
-.main-header {
-    text-align: center;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.button {
-    border: none;
-    padding: 8px;
-}
-
-.bg-black {
-    
-}
-
-#result-bmi{
-    font-size: 110-large;
-    font-family: math;
-}
-
+/* Mengatur gaya untuk kontainer utama */
 .container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;                     
+    flex-direction: column;           
+    background-color: cadetblue;      
 }
 
-h1 {
-    text-align: center;
-    color: #333;
+/* Mengatur gaya untuk panel kiri dan kanan */
+.left-panel, .right-panel {
+    flex: 1;                          
+    background-color: white;          
+    color: black;                    
+    padding: 20px;                 
+    margin: 10px 0;                  
 }
 
-ol {
-    list-style-type: none; /* Menghilangkan titik */
-    counter-reset: list; /* Mengatur ulang penghitung */
+/* Media Query untuk layar lebih besar */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;           
+    }
+
+    .left-panel, .right-panel {
+        margin: 0;                    
+    }
 }
 
-ol li {
-    counter-increment: list; /* Menghitung setiap item */
-    margin-bottom: 5px; /* Memberi jarak antar item */
+/* Mengatur gaya untuk judul */
+h2 {
+    text-align: center;               
 }
 
-ol li::before {
-    content: counter(list) ". "; /* Menampilkan angka sebelum item */
-    font-weight: bold; /* Opsional: membuat angka menjadi tebal */
+/* Mengatur gaya untuk label */
+label {
+    display: block;                   
+    margin: 10px 0 5px;              
 }
 
-p {
-    line-height: 1.6;
-    color: #555;
+/* Mengatur gaya untuk tombol */
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;              
+    border: none;                    
+    border-radius: 4px;            
+    cursor: pointer;                  
+    margin: 10px 0;                 
+    display: block;                  
+}
+
+/* Mengatur gaya untuk tombol primer */
+.btn-primary {
+    background-color: #00bcd4;       
+    color: white;                    
+}
+
+/* Mengatur gaya untuk tombol sekunder */
+.btn-secondary {
+    background-color: red;          
+    color: white;                    
+}
+
+/* Mengatur warna tombol saat hover */
+.btn-primary:hover {
+    background-color: #0097a7;       
+}
+
+.btn-secondary:hover {
+    background-color: palevioletred;  
+}
+
+/* Mengatur gaya untuk hasil */
+.result {
+    padding: 20px;                   
+    margin-top: 20px;              
+    text-align: center;           
+    background-color: rgb(209, 216, 216); 
+}
+
+/* Mengatur gaya untuk form */
+.form {
+    padding: 20px;                  
+    background-color: rgb(209, 216, 216); 
+}
+
+/* Mengatur gaya untuk penjelasan */
+.penjelasan {
+    margin-top: 20px;               
+    background-color: white;        
+}
+
+/* Mengatur gaya untuk input */
+.input {
+    width: calc(100% - 20px);        
+    padding: 10px;                  
+    margin: 10px 0;                  
+    border: 1px solid #ccc;         
+    border-radius: 5px;              
+    box-sizing: border-box;        
+}
+
+/* Mengatur gaya untuk tombol radio */
+.radio {
+    width: auto;                     
+    margin: 0 5px;                 
+}
+
+/* Mengatur gaya untuk paragraf */
+.p {
+    text-align: justify;            
+}
+
+/* Media Query untuk layar lebih kecil */
+@media (max-width: 768px) {
+    .input {
+        width: 100%;                 
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;                
+    }
 }
